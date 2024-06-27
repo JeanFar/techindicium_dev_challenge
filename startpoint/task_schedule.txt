@@ -1,0 +1,30 @@
+1. Categories:
+
+
+
+2. orders
+a. order_id (primary key)
+b. change all the keys to (NOT NULL)
+c. order_id (change to INTEGER)
+
+3. products
+a. product_name , supplier_id , category_id , 
+quantity_per_unit , unit_price (change to not null)
+b. product_id (change to integer)
+
+
+4. us_states
+
+b. state_name (change to not null)
+
+
+
+
+5. New foreign keys
+- orders teve a chave corrigida para referenciar ship_via (orders) com ship_id (shippers);
+- category_id (products) estará relacionado com category_id (categories);
+- especifiquei a chave autorreferenciada de employees (reports_to with employee_id);
+- order_id (order_details) with order_id (orders);
+- product_id (order_details) with product_id (products);
+- unit_price 
+
