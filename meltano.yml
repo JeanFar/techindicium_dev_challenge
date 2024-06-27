@@ -1,0 +1,38 @@
+version: 1
+default_environment: dev
+project_id: 05084c21-aa53-4561-8343-897943fbc282
+environments:
+  - name: dev
+  - name: staging
+  - name: prod
+plugins:
+  extractors:
+    - name: tap-postgres
+      variant: meltanolabs
+      pip_url: git+https://github.com/MeltanoLabs/tap-postgres.git
+      config:
+        host: Admin
+        port: 5432
+        user: jeanluco
+        password: Dicdoc@123
+        database: db_northwind_techindicium_code_challenge
+    - name: tap-csv
+      variant: meltano
+      pip_url: meltano/tap-csv
+      config:
+        file_path: C:\Users\user\OneDrive\Área de Trabalho\desafio_eng_dados\data\order_details.csv
+  loaders:
+    - name: target-csv
+      variant: meltano
+      pip_url: meltano/target-csv
+      config:
+        destination_path: C:\Users\user\OneDrive\Área de Trabalho\desafio_eng_dados\data\csv_output
+    - name: target-postgres
+      variant: meltanolabs
+      pip_url: meltanolabs-target-postgres
+      config:
+        host: Admin
+        port: 5432
+        user: jeanluco
+        password: Dicdoc@123
+        database: db_northwind_techindicium_code_challenge
