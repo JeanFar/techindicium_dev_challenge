@@ -26,7 +26,7 @@ Welcome to the **Data Engineering Code Challenge** for software developers! This
 2. Created a schema using XMind for comparison with the challenge instructions. Identified and resolved discrepancies, recording changes in `task_schedule.txt`. Adjusted NOT NULL constraints, revised foreign keys, and ensured primary key redundancy for proper table properties.
 3. Planned to insert foreign keys for `order_details` referencing `orders` and `products` in the final step.
 
-![Database Model](C:\Users\user\OneDrive\Área de Trabalho\desafio_eng_dados\images\db_model.png)
+![Database Model](./images/db_model.png)
 
 #### Pipeline Development:
 1. Considered merging all data into a single dataframe using Pandas, but opted for Meltano for dynamic pipeline management.
@@ -62,7 +62,7 @@ extract_task >> merge_csv_to_sql_task
 load_order_details_task >> merge_csv_to_sql_task
 
 
-![DAG Workflow](C:\Users\user\OneDrive\Área de Trabalho\desafio_eng_dados\images\dag_workflow.png)
+![DAG Workflow](./images/dag_workflow.png)
 
 ## 3. Conclusions
 
