@@ -36,7 +36,7 @@ Welcome to the **Data Engineering Code Challenge** for software developers! This
     - `extract_table_to_csv(table_name)`: Extracts each table from SQL and saves to the local file system.
     - `load_order_details()`: Loads the `order_details.csv` table and saves it to the local file system.
     
-    ```python
+    python
     def extract_table_to_csv(table_name):
         # Function to extract data from PostgreSQL and save as CSV
         pass
@@ -44,7 +44,7 @@ Welcome to the **Data Engineering Code Challenge** for software developers! This
     def load_order_details():
         # Function to load order_details.csv and save as CSV
         pass
-    ```
+    
    
     These functions operate independently, saving data in subdirectories for each table within the local file system.
 
@@ -53,17 +53,16 @@ Welcome to the **Data Engineering Code Challenge** for software developers! This
 1. Used `sqlalchemy` to merge CSV files into a single PostgreSQL database in the `final_data` directory.
 2. Added foreign keys for `order_details` referencing `orders` and `products`.
 
-```python
+python
 def merge_csv_to_sql():
     # Function to merge CSV files into a single PostgreSQL database
     pass
-```
 
 #### DAG Workflow:
-```python
+python
 extract_task >> merge_csv_to_sql_task
 load_order_details_task >> merge_csv_to_sql_task
-```
+
 
 ![DAG Workflow](C:\Users\user\OneDrive\Área de Trabalho\desafio_eng_dados\images\dag_workflow.png)
 
