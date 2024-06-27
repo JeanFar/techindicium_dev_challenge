@@ -1,6 +1,4 @@
-Sure, here is the text formatted in Markdown for your GitHub README:
 
-```markdown
 # 🛠️ Data Engineering Code Challenge
 
 ## 1. Introduction
@@ -74,5 +72,7 @@ load_order_details_task >> merge_csv_to_sql_task
 - A lighter pipeline model could be discussed, optimizing system capacity usage.
 - The improved model could feature an API for automatic SQL code adjustments.
 
-Thank you for the opportunity to participate in this challenge. I am eager to work practically on pipeline development, exploring extensive possibilities in this field!
+Thank you for the opportunity to participate in this challenge. 
+I am eager to work practically on pipeline development, 
+exploring extensive possibilities in this field!
 
